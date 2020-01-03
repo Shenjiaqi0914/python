@@ -1,6 +1,5 @@
 from flask import Flask, render_template
 
-
 app = Flask(__name__)
 
 @app.route('/time', methods=['POST'])
@@ -32,7 +31,6 @@ def conclusion() ->'html':
 def entry_page() -> 'html':
     return render_template('entry.html',
                            the_title='产假时间长度跟地区发展程度 经济状况的关联 对女性的社会地位问题进行一个思考')
-
 
 if __name__ == '__main__':
     app.run(debug=True)
