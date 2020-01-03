@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>标题</title>
+</head>
+<body>
+<h3>背景</h3>
+<p>在经济与社会双重转型的过程中,女性作为一个整体的生存与发展状态, 特别是她们在社会结构中所处的地位引起了社会越来越多的关注。 </p>
+<p>很经典的一种就业歧视问题就是很多中小企业不招收未婚或者没有还没有生育子女的女性。在询问原因时，用工单位表示也很无奈，很多女性结婚后会将重心放在家庭而非工作中，并且女性婚后怀孕会有产假，好几个月甚至整年的休假，这对企业来说会产生不小的利润损耗,现代商业经济发展速度很快，市场变化频繁，一旦请假好几个月，那么这名员工对岗位的熟悉程度又会变得陌生,需要企业重新培养，这样一来将使企业利益受损。而男性员工相对来说并没有此等顾虑，并且年轻力壮，精力充沛，相对年轻女性尤其是刚毕业的女学生来说，有着太多的优势。</p>
+<p>在现代社会，在全世界同样的都会或多或少的有就业性别歧视问题，虽然国家一直在出台各项政策法规以期保护女性的合法就业权益，但是收效甚微。这种的传统观念虽然是值得批判的，但是已然流传至今，在人们的思想中根深蒂固，如何改变这种落后的观念，是值得整个社会反思的。 </p>
+<form method="POST" action="/time">
+    <select>
+        <option value="1">产假时间</option>
+        <option value="2" selected>世界GDP指标</option>
+        <option value="3">孕妇死亡率</option>
+        <option value="3">中国高等教育率</option>
+        <option value="3">总结</option>
+    </select>
+<p><input value='产假时间' type='SUBMIT'></p>
+</form>
+<form method="POST" action="/GDP">
+<p><input value='世界GDP' type='SUBMIT'></p>
+</form>
+<form method="POST" action="/death">
+<p><input value='孕妇死亡率' type='SUBMIT'></p>
+</form>
+<form method="POST" action="/education">
+<p><input value='中国高等教育率' type='SUBMIT'></p>
+</form>
+<form method="POST" action="/conclusion">
+<p><input value='总结' type='SUBMIT'></p>
+</form>
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1577960745323&di=319f4e9d96f5085a9cd15774c7471fe5&imgtype=0&src=http%3A%2F%2Fimgs.aiyangedu.com%2FA20%2F20%2Fayedu_c55e853af2e760abe741f8d85dc4077c_2020869176.jpg">
+{{ the_plot_all|safe }}
+{{ the_res|safe }}
+</body>
+{% endblock %}
